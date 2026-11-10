@@ -1,0 +1,7 @@
+[submodule "AnyDexGrasp"]
+	path = AnyDexGrasp
+	url = https://github.com/graspnet/AnyDexGrasp.git
+[submodule "MinkowskiEngine"]
+	path = MinkowskiEngine
+	url = git@github.com:kittvnebluda/MinkowskiEngine.git
+	branch = cuda13
