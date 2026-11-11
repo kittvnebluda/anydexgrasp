@@ -1,3 +1,0 @@
-#!/bin/bash
-# Run a command in the ROS distrobox with the solution workspace sourced: ros.sh CMD...
-exec distrobox enter ubuntu24 -- bash -c 'cd /home/litt/Projects/nssr-sol-team-071 && source .envrc && cd - >/dev/null; "$@"' bash "$@"
