@@ -1,0 +1,36 @@
+[project]
+name = "adg-server"
+version = "0.1.0"
+description = "AnyDexGrasp served over a local socket: Inspire-hand grasps planned on a depth cloud"
+requires-python = ">=3.10"
+# torch and MinkowskiEngine are installed first (install.sh: the CUDA build they need); graspnetAPI with --no-deps,
+# its imports are these
+dependencies = [
+    "numpy",
+    "scipy",
+    "open3d==0.20.0",
+    "opencv-python-headless",
+    "matplotlib",
+    "pillow",
+    "tqdm",
+    "transforms3d",
+    "trimesh",
+    "autolab-core",
+    "cvxopt",
+    "dill",
+    "scikit-image",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["adg_server"]
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["AnyDexGrasp", "MinkowskiEngine", "work"]
